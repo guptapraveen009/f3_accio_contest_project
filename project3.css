@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#1D1D23 ;
+    color: #333;
+  }
+  
+  .app-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+   
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: #f9f9f9;
+  }
+  
+  .add-timer-btn {
+    background-color: yellow;
+    
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-timer-btn:hover {
+    background-color: yellow;
+  }
+  
+  .timers-container {
+    margin-top: 2rem;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background: #34344A;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timer .time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f9f9f9;
+  }
+  
+  .timer .controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .controls button {
+    background-color: #34344A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  .controls button.reset {
+    background-color: #f44336;
+  }
+  
+  .controls button.reset:hover {
+    background-color: #d32f2f;
+  }
+
+  #timmer{
+    background-color: #34344A;
+    border-radius: 5rem
+  }
+  .setT{
+    color: #f9f9f9;
+  }
