@@ -1,9 +1,11 @@
 document.getElementById("add-timer-btn").addEventListener("click", addTimer);
+let timerContainer=document.getElementById("timers-container");
+
 
 function addTimer() {
   const timerContainer = document.getElementById("timers-container");
 
-  // Create timer elements
+  
   const timerDiv = document.createElement("div");
   timerDiv.classList.add("timer");
 
@@ -17,21 +19,20 @@ function addTimer() {
   const startBtn = document.createElement("button");
   startBtn.textContent = "Start";
 
-  const pauseBtn = document.createElement("button");
-  pauseBtn.textContent = "pause";
+
 
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
   deleteBtn.classList.add("Delete");
 
-  controlsDiv.append(startBtn, pauseBtn, deleteBtn);
+  controlsDiv.append(startBtn,  deleteBtn );
   timerDiv.append(timeDisplay, controlsDiv);
   timerContainer.appendChild(timerDiv);
 
   let timerInterval;
   let elapsedSeconds = 0;
 
-  // Start timer
+  
   startBtn.addEventListener("click", () => {
     if (timerInterval) return;
     timerInterval = setInterval(() => {
@@ -40,20 +41,15 @@ function addTimer() {
     }, 1000);
   });
 
-  // Pause timer
-  pauseBtn.addEventListener("click", () => {
-    clearInterval(timerInterval);
-    timerInterval = null;
-  });
-
-  // Reset timer
   deleteBtn.addEventListener("click", () => {
     clearInterval(timerInterval);
     timerInterval = null;
     elapsedSeconds = 0;
-    timeDisplay.textContent = "";
+    timerDiv.remove();
 });
+
 }
+
 
 // Format time in HH:MM:SS
 function formatTime(seconds) {
